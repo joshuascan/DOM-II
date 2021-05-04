@@ -65,9 +65,16 @@ function colorHeadings(event) {
 document.addEventListener('keydown', colorHeadings);
 
 
-function welcome(event) {
+function welcome() {
     setTimeout(function() {
         alert('Welcome!!!');
     }, 1000);
 }
 document.addEventListener('load', welcome());
+
+Array.from(document.links).forEach((link) => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+    });
+});
+
