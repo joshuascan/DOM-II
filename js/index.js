@@ -68,7 +68,7 @@ document.addEventListener('keydown', colorHeadings);
 function welcome() {
     setTimeout(function() {
         alert('Welcome!!!');
-    }, 1000);
+    }, 500);
 }
 document.addEventListener('load', welcome());
 
@@ -78,3 +78,15 @@ Array.from(document.links).forEach((link) => {
     });
 });
 
+const destination = document.querySelector('.content-pick');
+
+destination.addEventListener('click', (event) => {
+    event.target.style.backgroundColor = 'goldenrod';
+})
+
+const button = document.querySelector('.btn');
+
+button.addEventListener('click', (event) => {
+    event.target.style.border = '2px dotted crimson';
+    event.stopPropagation();
+})
