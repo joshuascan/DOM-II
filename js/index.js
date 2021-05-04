@@ -48,6 +48,12 @@ window.addEventListener('scroll', function () {
 });
 
 
+const textContent = document.querySelector('.text-content');
+
+window.addEventListener('resize', () => {
+    textContent.style.backgroundColor = 'purple';
+})
+
 
 function colorHeadings(event) {
     if (event.key === 'p') {
