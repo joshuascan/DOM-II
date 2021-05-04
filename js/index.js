@@ -48,15 +48,6 @@ window.addEventListener('scroll', function () {
 });
 
 
-const headings = document.querySelectorAll('h1, h2, h4');
-
-// Array.from(headings).forEach((heading) => {
-//     heading.addEventListener('keydown', (event) => {
-//         if (event.key === "b") {
-//         event.target.style.color = 'blue';
-//         }
-//     });
-// });
 
 function colorHeadings(event) {
     if (event.key === 'p') {
@@ -72,3 +63,11 @@ function colorHeadings(event) {
     }
 }
 document.addEventListener('keydown', colorHeadings);
+
+
+function welcome(event) {
+    setTimeout(function() {
+        alert('Welcome!!!');
+    }, 1000);
+}
+document.addEventListener('load', welcome());
