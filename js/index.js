@@ -2,11 +2,11 @@
 
 const header = document.querySelector('.main-navigation');
 
-header.addEventListener('mouseover', (event) => {
+header.addEventListener('mouseover', () => {
     header.classList.add('pink');
 });
 
-header.addEventListener('mouseleave', (event) => {
+header.addEventListener('mouseleave', () => {
     header.classList.remove('pink');
 });
 
@@ -74,7 +74,7 @@ document.addEventListener('keydown', colorHeadings);
 function welcome() {
     setTimeout(function() {
         alert('Welcome!!!');
-    }, 500);
+    }, 750);
 }
 document.addEventListener('load', welcome());
 
